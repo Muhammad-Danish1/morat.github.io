@@ -1,0 +1,60 @@
+.cartModal {
+  position: absolute;
+  right: 1rem;
+  width: 350px;
+  padding: 1rem;
+  z-index: 99999999;
+  box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.05);
+  background-color: #fff;
+  border-radius: 2rem;
+}
+.cartModal h2 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  margin-left: 0.3rem;
+}
+.cartModal .body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0.3rem;
+  overflow: auto;
+  max-height: 50vh;
+  background-color: #eee;
+  border-radius: 2rem;
+}
+.cartModal .card {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  /* gap: 0.1rem; */
+  margin-bottom: 0.5rem;
+  padding: 0.3rem;
+  padding-top: 0.6rem;
+  border-radius: 2rem;
+  border-bottom: 2px dashed #000;
+  box-shadow: 0px 7px 0px 0px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s;
+}
+.cartModal .body .card:hover {
+  border: 2px dashed #000;
+  box-shadow: none;
+  padding: 0.5rem;
+  transition: all 0.2s;
+}
+.cartModal .card img {
+  width: 25%;
+}
+.cartModal .card .card-body {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+}
+.cartModal .card .card-body .company {
+  display: flex;
+  justify-content: space-between;
+}
+.cartModal .card .card-body .company span {
+  font-size: 0.9rem;
+}

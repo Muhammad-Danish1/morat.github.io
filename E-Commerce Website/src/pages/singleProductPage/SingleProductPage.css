@@ -1,0 +1,195 @@
+@keyframes icon {
+  0% {
+    scale: 1;
+  }
+  50% {
+    scale: 1.1;
+  }
+  100% {
+    scale: 1;
+  }
+}
+.overlay-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 99;
+}
+.product-details-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 2rem 0px 2em 2rem;
+  width: 90%;
+}
+.modal-close-btn {
+  position: absolute;
+  right: -13px;
+  top: -13px;
+  width: 24px;
+  height: 24px;
+  font-size: 1rem;
+  font-weight: 800;
+  border: none;
+  /* border-bottom: 2px dashed #000; */
+  background-color: #fff;
+  color: #000;
+  transition: 2s all;
+  border-radius: 50%;
+  outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: icon 0.8s infinite ease-in-out;
+  transition: all 0.3s;
+}
+.details-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  background-color: #eee;
+  padding: 2rem;
+  padding-bottom: 5rem;
+  border-radius: 2rem;
+  overflow: auto;
+  max-height: 80vh;
+}
+.details-content img {
+  width: 300px;
+  border-top-left-radius: 2rem;
+}
+.details-content .product-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.details-content h3 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+.details-content .product-data-warranty {
+  display: flex;
+  width: 100%;
+  /* justify-content: space-between; */
+  gap: 0.9rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+.product-data-warranty .product-warranty-data {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 20%;
+}
+
+.product-data-warranty .product-warranty-data .warranty-icon {
+  background-color: #fff;
+  border-radius: 50%;
+  width: 2.2rem;
+  height: 2.2rem;
+  padding: 0.3rem;
+  box-shadow: 0px 3px 0px 0px rgba(0, 0, 0, 0.3);
+  animation: icon 0.8s infinite ease-in-out;
+  transition: all 0.3s;
+}
+.modal-close-btn:hover,
+.product-data-warranty .product-warranty-data .warranty-icon:hover {
+  rotate: 360deg;
+  border: 2px dashed #000;
+  box-shadow: none;
+}
+.product-data-warranty .product-warranty-data .warranty-icon p {
+  font-size: 1rem;
+  padding-top: 0.4rem;
+}
+.product-data-info {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 2px dashed #000;
+  margin-top: 1rem;
+  padding-bottom: 0.5rem;
+}
+.product-data-info .product-info {
+  display: flex;
+  justify-content: space-between;
+  gap: 3rem;
+  font-weight: 600;
+}
+.product-data-info .product-info span {
+  color: #666;
+}
+.details-content .qty {
+  display: flex;
+  gap: 0.9rem;
+  margin: 0.9rem 0px;
+}
+.details-content .qty-text {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+.qty .qty-change {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+.qty .qty-change .qty-value {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.qty .qty-change .btn {
+  font-size: 1.5rem;
+  background-color: #fff;
+  color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.1rem 1rem !important;
+  border-radius: 50%;
+  box-shadow: 0px 3px 0px 0px rgba(0, 0, 0, 0.3);
+}
+.qty-value {
+  width: 30px;
+}
+.details-content .addtocart-btn {
+  background-color: #fff;
+  color: #000;
+  font-size: 1rem;
+  font-weight: 700;
+  display: flex;
+  gap: 0.3rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem;
+  box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.3);
+}
+.qty .qty-change .btn:hover,
+.details-content .addtocart-btn:hover {
+  box-shadow: none;
+  box-shadow: inset 0px 3px 0px 0px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 930px) {
+  .details-content {
+    flex-direction: column;
+  }
+}
+@media (max-width: 540px) {
+  .details-content img {
+    width: 100%;
+  }
+  .details-content .product-details {
+    width: 100%;
+  }
+  .details-content h3 {
+    font-size: 1.5rem;
+  }
+}
